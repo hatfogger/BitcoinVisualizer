@@ -1,0 +1,18 @@
+<html>
+    <script>
+        // var url ="https://blockchain.info/block-height/$block_height?format=json"
+        // var block_hash = "00000000000000000002cb1c80ef783f6445a4e6a5ae5bbcfa4ff1d693bc6985"
+        var api_url = "https://corsproxy.io/?https://blockchain.info/block-height/0?format=json"
+        var api_url_gpt = "https://blockchain.info/rawblock/807597?api_code=eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiY2FiNmEyYTgtMmNkYi00NzExLWE4NTctNDhjNmQxYzEwZDQ2IiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6dHJ1ZSwiaWF0IjoxNjkxNzM0NDkyLCJqdGkiOiIwYTYwM2ExNy1kZmUyLTQwYmEtOGMzYy00ZTUzYzYwZjMxOTgiLCJzZXEiOjY5NjkyNDQsIndkbCI6ZmFsc2V9.IP/IDFLiRx9jfhFtqr2AS20QyzZAqi7DjK6Xvobl9297AWtiC00zwTE2syaGB+sLwmD6ocdV4twjqPX7XbTa7TE="
+        const api_key = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiY2FiNmEyYTgtMmNkYi00NzExLWE4NTctNDhjNmQxYzEwZDQ2IiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6dHJ1ZSwiaWF0IjoxNjkxNzM0NDkyLCJqdGkiOiIwYTYwM2ExNy1kZmUyLTQwYmEtOGMzYy00ZTUzYzYwZjMxOTgiLCJzZXEiOjY5NjkyNDQsIndkbCI6ZmFsc2V9.IP/IDFLiRx9jfhFtqr2AS20QyzZAqi7DjK6Xvobl9297AWtiC00zwTE2syaGB+sLwmD6ocdV4twjqPX7XbTa7TE="
+        headers = {"Authorization":"Bearer"+api_key}
+        // fetch(api_url_gpt).then(response=> {return response.json()}).then(data => {console.log(data)})
+        fetch(api_url,headers).then(response=> {return response.json()}).then(data => {console.log(data)})
+        // fetch("https://corsproxy.io/?https://blockchain.info/latestblock").then(response=> {return response.json()}).then(data=> console.log(data["height"]))
+        console.log("123")
+        
+    </script>
+    <body>
+        
+    </body>
+</html>

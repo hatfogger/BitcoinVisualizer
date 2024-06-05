@@ -1,0 +1,64 @@
+<html>
+    
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blanchedalmond;
+        }
+        .test-block{
+            height: 20vh;
+            width: 25vw;
+            z-index: 10;
+            background-color: aquamarine;
+        }
+        @keyframes box_grow{
+    from{ 
+            display: flex;
+            word-break: break-all;
+            padding: 1vh;
+            /* overflow: hidden; */
+            justify-content: center; 
+            align-items: center;
+            height: 20vh;
+            width: 16vh;
+            min-width: 20vh;
+            margin: 10px;
+            background-color:#15ff00;
+        }
+    to{
+            transition-delay: 1000ms;
+            background-color: #86ff7b ;
+            height: 40vh;
+            min-width: 32vh;
+            width: 32vh;
+            margin: 10;
+        }
+    }
+    </style>
+
+    <body>
+        <div class="test-block" id="1">
+            
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const animation1 = [{
+            height:"50vh"},{height:"100vh"}]
+            const box = document.getElementById('1')
+            // console.log("!@3")
+            box.addEventListener('mouseenter',() =>{
+                gsap.to('.test-block',{height:"40vh",width:"32vh",backgroundcolor:"#86ff7b",duration:1})
+                console.log("on")
+                box.animate(animation1)
+                
+            })
+            box.addEventListener('mouseleave',() =>{    
+                gsap.to('.test-block',{height:"20vh",width:"16vh",backgroundcolor:"#15ff00",duration:1})
+                console.log("off")
+            })      
+               
+    </script>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .mainclass{
+            background-color: aqua;
+            height: 10vh;
+            width: 10vw;
+        }
+        #mainbutton{
+            height: inherit;
+            width: inherit;
+        }
+    </style>
+    <body>
+        <div class="mainclass">
+            <button id="mainbutton"></button>
+        </div>
+    </body>
+    <script>
+    //     async function block_fetching(block_height){
+    // // var block_hash = "00000000000000000002cb1c80ef783f6445a4e6a5ae5bbcfa4ff1d693bc6985"
+    //         var api_url = "https://corsproxy.io/?https://blockchain.info/block-height/"+block_height+"?format=json"
+    //         console.log(api_url)
+    //         const api_key = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiY2FiNmEyYTgtMmNkYi00NzExLWE4NTctNDhjNmQxYzEwZDQ2IiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6dHJ1ZSwiaWF0IjoxNjkxNzM0NDkyLCJqdGkiOiIwYTYwM2ExNy1kZmUyLTQwYmEtOGMzYy00ZTUzYzYwZjMxOTgiLCJzZXEiOjY5NjkyNDQsIndkbCI6ZmFsc2V9.IP/IDFLiRx9jfhFtqr2AS20QyzZAqi7DjK6Xvobl9297AWtiC00zwTE2syaGB+sLwmD6ocdV4twjqPX7XbTa7TE="
+    //         headers = {"Authorization":"Bearer"+api_key}
+    //         var response = await fetch(api_url,headers)
+            
+    // // c       onsole.log(response)
+    //         // 1212
+    //         if(response!= undefined){
+    //             return response.json()
+    //         }
+    //     }
+    async function latest_block_fetching(){
+        return fetch("https://corsproxy.io/?https://blockchain.info/latestblock").then(response=> {return response.json()})
+    }
+    var json_data =latest_block_fetching().then(data=>{
+            console.log(data)
+    });
+    var button = document.getElementById("mainbutton")
+    button.addEventListener("click",()=>{
+            if(json_data!=undefined){
+                console.log(typeof json_data)
+                const string_data = JSON.stringify(json_data)
+                console.log(string_data)
+                var tempblob = new Blob([string_data],{type:"text/plain;charset=utf-8"})
+                console.log(tempblob)
+                // saveAs(tempblob,"block.txt")
+                // var link=window.URL.createObjectURL(tempblob);
+                // window.location=link;
+                window.alert("I am here 3");
+            }
+    })
+
+    </script>
+</html>

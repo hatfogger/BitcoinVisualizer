@@ -1,0 +1,72 @@
+<html>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .outer-body{
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            width: 50vw;
+            border: 2px solid black;
+        }
+        #main-box{
+            background: aqua;
+            display: flex;
+            flex-direction: column;
+            /* white-space: nowrap; */
+            gap: 1vh;
+            position: relative;
+            top: 3vh;
+            height: 47vh;
+            width: 50vw;
+        }
+        .element{
+            margin: 0.5vh;
+            /* display: inline-block; */
+            font-size:3vh;
+            position: relative;
+            /* background-color: black; */
+            border: 1px solid black;
+            height:fit-content;
+            overflow-wrap: break-word;
+            min-width: 10vw ;
+            max-width: 35vw;
+            /* width: ; */
+        }
+    </style>
+    <body>
+        <div class="outer-body">
+            <div id="main-box">
+                
+            </div>
+        </div>
+    </body>
+    <script>
+            const main_box = document.getElementById("main-box")
+            main_box.style.display = "flex"
+            const temp_box = document.createElement("div")
+            temp_box.className = "element"
+            temp_box.textContent = "Bits: 386198911"
+            main_box.appendChild(temp_box)
+
+            const temp_box_1 = document.createElement("div")
+            temp_box_1.className = "element"
+            temp_box_1.textContent = "Fee: 15285685"
+            main_box.appendChild(temp_box_1)
+
+            const temp_box_2 = document.createElement("div")
+            temp_box_2.className = "element"
+            temp_box_2.textContent = "Hash: 00000000000000000003ed56a9513aeba817df65341cd5da19693253be56a1b5"
+            main_box.appendChild(temp_box_2)
+
+            const temp_box_3 = document.createElement("div")
+            temp_box_3.className = "element"
+            temp_box_3.textContent = "Height: 810159"
+            main_box.appendChild(temp_box_3)
+            
+    </script>
+</html>

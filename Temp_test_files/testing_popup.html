@@ -1,0 +1,51 @@
+<html>
+    <style>
+        body{
+            /* display: flex; */    
+        }
+        .main-box{
+            border: 2px solid black;
+            height: 2vh;
+            width: 10vw;
+        }
+        #button-1{
+            height: inherit;
+            width: inherit;
+        }
+        .popup{
+            /* display: ; */
+            position: absolute;
+            height: 50vh;
+            width: 50vw;
+            border: 4px solid black;
+        }
+    </style>
+    <script>
+        function add_popup(){
+            const popup = document.createElement("div")
+            popup.className = "popup"
+            const cut_popup = document.createElement("button")
+            cut_popup.style.position = "relative"
+            cut_popup.style.left = "48vw"
+            cut_popup.style.height = "2vh"
+            cut_popup.style.width = "2vw"
+
+            cut_popup.addEventListener("click",()=>{
+                body.removeChild(popup)
+            })
+            popup.appendChild(cut_popup)
+
+            const body = document.getElementById("1")
+            console.log("!@3")
+            body.appendChild(popup)
+
+
+        }
+    </script>
+    <body id="1">
+        
+        <div class="main-box">
+            <button id="button-1" onclick="add_popup()"></button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+body{
+    background-color: rgb(198, 230, 230); 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:0;
+    margin: 0;
+
+}
+
+.header{
+    background: #ffb347;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #5988a8, #5988a8); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: #6c8fa7; */
+    background: hsla(214, 27%, 46%, 0.5);
+    z-index: 1;
+    box-shadow: 0px 0px 10px 1px;
+    display: inline-grid;
+    grid-template-columns:  1fr [bitcoinLogo]1.5fr  6fr  [githubLogo]1.5fr 1fr;
+    align-items: center;
+    /* justify-content: center; */
+    height: 12vh;
+    width: 100%;
+
+    /* margin: ; */
+    /* border: 3px solid black; */
+    
+}
+.links{
+    grid-column-start: 5;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid black;
+    /* position: absolute; */
+    /* right: 10px; */
+    
+    top: 3.5vh;
+    
+    /* bottom: 0; */
+    font-size: 5vh;
+    margin: 0vh;
+    /* margin-top: 8vh; */
+}
+.links:hover{
+    color: rgb(63, 63, 63);
+}
+.main-text{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-family: anaheim;
+    font-weight: 800;
+    font-size: 4vw;
+    color: rgb(255, 255, 255);
+    margin:2vh ;
+}
+
+.blocks-box-outside{
+    position: absolute;
+    display: flex;
+    /* flex-direction:column ; */
+    justify-content: center;
+    align-items: center;
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #8E54E9);  /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to right, #5588ac, #5588ac); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    bottom: 0.01vh;
+    top: 12vh;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto ;
+}
+#search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7.5vh;
+    font-size: 1.5vh;
+    height: 4vh;
+    min-width: 15vw;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #c8cbda;
+}
+#search-bar:hover{
+    background-color: #fffffff4;
+}
+.blocks-box-inside{
+    box-shadow: 0px 1px 10px 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5vh;
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(43, 85, 133),rgb(43, 85, 133)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.block{
+    box-shadow: 0px 0px 10px;
+    display: flex;
+/* 5rgb(0, 0, 0)0px 0px 10px rgb(29, 29, 29); */
+    word-break: break-all;
+    font-size: 3em;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+    gap: 0vh;
+    /* overflow: hidden; */
+    justify-content: center; 
+    align-items: center;
+    height: 25vh;
+    width: 25vh;
+    min-width: 25vh;
+    margin: 5vh;
+    /* background-color:#15ff00; */
+    /* delay: 1000ms; */
+    /* background: #6c91ff; */
+     /* background: -webkit-linear-gradient(to right, rgb(166, 175, 202), #396afc);   */
+    background: #959dca;
+
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height:1vh;
+  }
+::-webkit-scrollbar:hover{
+    height: 10vh;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10vw;
+    margin-block: 5em;
+    background: #515357;
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10vw;
+    /* width: thin; */
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    height: 1.5vh;
+  background: #999999;
+}
+
+p{
+    /* font-size: 5vh; */
+}
+#popup{     
+            /* display: ; */
+            /* padding: 1vh; */
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 10vh;
+            height: 70vh;
+            /* min-width: 80vw; */
+            width: 80vw;
+            
+            background-color: #4a81f7fd;
+            
+            /* background-color: #fffffffd; */
+            /* border: 0.4vh solid rgb(0, 0, 0); */
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            border-radius: 5px;
+
+        }
+#button1{   
+    
+    z-index: 3;
+    position: absolute;
+    background:#ff3f3f00;
+    font-size: 2vh;
+    font-weight: 1000;
+    top: 0px;
+    right: 0px;
+    height: 4vh;
+    min-width: fit-content;
+    width: 4vw;
+    border-radius: 5px;
+    margin-top: 0.2vh;
+    margin-right: 0.1vh;
+    /* backdrop-filter: blur(10px); */
+    border: 0.01px solid black;
+}
+#button1:hover{
+    color: #ffffff;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
+
+#raw_json_button{
+    position: relative;
+    color: white;
+    z-index: 4;
+    top: 1vh;
+    width: fit-content;
+    margin-left:auto ;
+    margin-right: auto;
+    right: 0px;
+    left: 0px;
+    font-size: 3vh;
+    border-radius: 5px;
+    padding: 1vh;
+    /* background-color: rgba(255, 91, 91, 0.638); */
+    /* background: linear-gradient(to right, #366788, #366788); */
+    background: linear-gradient(to right, #5988a8, #5988a8);
+}
+#raw_json_button:hover{
+    background: linear-gradient(to right, #408cbe, #408cbe);
+    box-shadow: 0px 0px 2px  rgb(0, 0, 0);
+}      
+#container1{
+    /* margin-top: 9vh; */
+    position: relative;
+    backdrop-filter: blur(1000px);
+    background-color: #4a81f7fd;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0vh;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    /* top: 5vh; */
+    /* margin-top: 10vh; */
+    /* padding: 1vh; */
+    /* padding-right:0vh; */
+    backdrop-filter: blur(10px);
+}
+.inline_container{
+    display: flex;
+    /* flex-direction: row; */
+    gap: 0vh;
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+#lines_right{
+    font-family: anaheim;
+    color: #ffffff;
+    font-size: 2.5vh;
+    /* border: 2px solid black; */
+    margin: 1vh 0vh 1vh 1vh;
+    max-width: 50vw;
+}
+#lines_left{
+    font-family: anaheim;
+    color: #f4a44a;
+    font-size: 3vh;
+    font-weight: 600;
+    /* border: 2px solid black; */
+    margin: 1vh 0vh 1vh 1vh;
+    max-width: 50vw;
+}
+a{  color: #000000;
+    text-decoration:none ;
+}
+#bitcoinBox{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+ #bitcoinLogo{
+    
+    display: inline-block;
+    height: 8vh;
+    width: 8vh;
+    /* left: 10vh;
+     */
+    /* color: #243B55; */
+    /* filter: ; */
+    /* filter: invert(70%) sepia(49%) saturate(7498%) hue-rotate(208deg) brightness(108%) contrast(101%); */
+    /* filter: invert(37%) sepia(90%) saturate(4133%) hue-rotate(220deg) brightness(103%) contrast(98%); */
+    transform: rotate(20deg);
+    filter: invert(66%) sepia(23%) saturate(3811%) hue-rotate(349deg) brightness(101%) contrast(94%);
+}
+#github_logo{
+    /* display: none; */
+}
+.block_heights{
+    color: rgb(243, 243, 243);
+    font-size: 5vh;
+}

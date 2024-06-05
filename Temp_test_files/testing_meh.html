@@ -1,0 +1,54 @@
+<html>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            gap: 10vh;
+            justify-content: center;
+            align-items: center;
+            padding: 5vh;
+            /* overflow: hidden; */
+        }
+        .block{
+            height: 20vh;
+            width: 20vw;
+            min-width: 20vw;
+            display: flex;
+            background-color: blanchedalmond;  
+            /* text-align: center; */
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: ;
+        }
+
+    </style>
+    <body>
+        
+        <div class="block" id="1"></div>
+        <div class="block" id="2"></div>
+        <div class="block" id="3"></div>
+        <div class="block" id="4"></div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        'use strict'
+        // var let=1;
+        var blocks = document.getElementsByClassName("block");
+        var temp = document.createElement("p")
+        temp.textContent = "123123123"
+        blocks[0].appendChild(temp)
+        for(let i=0;i<blocks.length;i++){
+            blocks[i].addEventListener("mouseenter",()=>{
+                console.log(i)
+                gsap.to(blocks[i],{height:"40vh",width:"40vh",minWidth:"40vh",duration:0.1})
+            })
+            blocks[i].addEventListener("mouseleave",()=>{
+                console.log(i)
+                gsap.to(blocks[i],{height:"20vh",width:"20h",minWidth:"20vh",duration:0.1}) 
+            })
+        }
+    </script>
+
+</html>
