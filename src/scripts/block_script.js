@@ -46,24 +46,14 @@ async function latest_block_fetching(){
 // console.log(latest_block_height)
 async function block_fetching(block_height){
     // var block_hash = "00000000000000000002cb1c80ef783f6445a4e6a5ae5bbcfa4ff1d693bc6985"
-    var api_url = "https://api.allorigins.win/get?url=https://blockchain.info/block-height/"+block_height+"?format=json"
+    var api_url = "https://crossorigin.me/https://blockchain.info/block-height/"+block_height+"?format=json"
     console.log(api_url)
     const api_key = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiY2FiNmEyYTgtMmNkYi00NzExLWE4NTctNDhjNmQxYzEwZDQ2IiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6ZmFsc2UsImlhdCI6MTcxNzIxODY3OCwianRpIjoiMzA1NGJiYjYtYmNhNy00YmQ3LWE1MzEtNWQ0MTUyZTZkMDUwIiwic2VxIjo2OTY5MjQ0LCJ3ZGwiOnRydWV9.Hx1h1wcVpmHTRG/55atLSOk7Lh0uS1fdP7/N6EGVh379L6q3Qjrpp8Wvc+A1QLhaur6AU/ms0V+cvWMPpz5fePQ="    
     var headers = {"Authorization":"Bearer"+api_key}
-    var response = await fetch(api_url,headers)
-    console.log(response)
-    console.log("working")
-    var info
-    await response.json().then(result =>{
-        info = result
-        console.log(info)
-    }    
-    )
-    return info
-        // 1212
-    // if(response!= undefined){
-    //     return JSON.parse(response.json()["contents"])
-    // }
+    fetch(api_url,headers).then(result =>{
+        console.log(result)
+    })
+    
 }
 
 var blocks ={}
